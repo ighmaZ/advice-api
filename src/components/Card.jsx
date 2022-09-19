@@ -6,20 +6,23 @@ const Card = () => {
     const[advice,setAdvice] = useState("");
     const[id, setId] = useState(0);
 
-useEffect(()=>{
+    function showAdvice(){   // will be used in button to change next advice
 
-    fetch( 'https://api.adviceslip.com/advice')
-    .then((response) => response.json())
-    .then((data) => {
+        fetch( 'https://api.adviceslip.com/advice')
+        .then((response) => response.json())
+        .then((data) => {
+            
+            setAdvice(data.slip.advice)   // setAdvice state
+            setId(data.slip.id)           // setId state
+        } )
+            
+        .catch((err)=> console.log(err.message))
         
-        setAdvice(data.slip.advice)
-        setId(data.slip.id)
-    } )
-        
-    .catch((err)=> console.log(err.message))
     
+        }
+useEffect(()=>{  // showAdvice is defined before useEffect so that we can use it for button onclick
 
-
+    showAdvice()
 },[]);
 
   return (
@@ -28,7 +31,8 @@ useEffect(()=>{
     <h6>ADVICE #{id}</h6>
     <p>{advice}</p>
     <hr/>
-    <button><BsFillDice5Fill/></button>
+    <button onClick={showAdvice}><BsFillDice5Fill/></button>
+
 
     </div>
     </>

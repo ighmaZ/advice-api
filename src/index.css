@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Montserrat:wght@100&family=Sacramento&family=Ubuntu&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.container{
+
+    height: 100vh;
+    background: #212732;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    width: 25rem;
+    height: 15rem;
+    background: #303a48;
+    border-radius: 0.5rem;
+    padding-top: 2rem;
+    box-shadow: 30px 20px 28px  #1d222e;
+}
+
+button{
+
+    position: absolute;
+     width: 2.5rem;
+     height: 2.5rem;
+     border-radius: 2rem;
+     border: none;
+     background-color: #6bebb0;
+     margin-top: 12rem;
+}
+
+h6{
+
+    margin-bottom: 1rem;
+    color:#6bebb0 ;
+    letter-spacing: 0.3rem;
+}
+
+hr{
+    width: 80%;
+    margin-top: 4rem;
+    border: none;
+    height: 1px;
+    color: #333;
+    background-color: whitesmoke;
+}
+
+p{
+    color: #fff;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+}
+
+
